@@ -9,7 +9,7 @@ with open('README.md') as f:
 setup(
     name='eksipy',
     version='1.0.0',
-    description='Unofficial API for Ekşi Sözlük.',
+    description='Unofficial API for Eksi Sozluk.',
     long_description=long_description,
     author='Yusuf Usta',
     author_email='yusuf@fusuf.codes',
@@ -19,13 +19,13 @@ setup(
     license='GPL3',
     packages=['eksipy'],
     install_requires=required,
-    keywords=['ekşi', 'ekşisözlük', 'api', 'unofficial'],
+    keywords=['eksi', 'eksisozluk', 'api', 'eksi-sozluk'],
+    long_description_content_type="text/markdown",
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.8'
     ],
 )
