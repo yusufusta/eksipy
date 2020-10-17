@@ -1,7 +1,7 @@
 # eksipy
 kutsal bilgi kaynağı için unofficial ve private API, giriş yapabilir; mesaj gönderebilir, entry gönderebilirsiniz. 
 
-![PyPI](https://img.shields.io/pypi/v/eksipy) ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/quiec/eksipy) ![PyPI - Downloads](https://img.shields.io/pypi/dm/eksipy) ![PyPI - Status](https://img.shields.io/pypi/status/eksipy) 
+![](https://img.shields.io/pypi/pyversions/eksipy?style=flat-square) ![](https://img.shields.io/pypi/v/eksipy?style=flat-square) ![PyPI - License](https://img.shields.io/pypi/l/eksipy?style=flat-square) ![](https://www.codefactor.io/repository/github/quiec/eksipy/badge) ![](https://deepsource.io/gh/Quiec/eksipy.svg/?label=active+issues&show_trend=true) ![DeepSource](https://deepsource.io/gh/Quiec/eksipy.svg/?label=resolved+issues&show_trend=true)
 
 > bu proje mobil(rest) api veya herhangi bir api **kullanmamaktadır**. tamamen bs4 ile web'e istek gönderilmektedir. _projenin temel amacı ekşi sözlükte ne yapabiliyorsanız bu kütüphane yapabilmektedir. v1.0 itibariyle çoğu fonksiyon desteklenmektedir._
 
