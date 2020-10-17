@@ -163,8 +163,9 @@ User.send_entry(eksipy.Baslik('php').get_topic(), 'dunyanin en iyi programlama d
 - [ ] Tüm kullanıcı istatistikleri, görseller, sorunsallar...
 - [ ] Zengin bir CLI uygulaması
 
-## ✏ Author
-[Quiec](https://t.me/fusuf), yusuf@quiec.tech
+## 💻 Contributors
+Developer [Quiec](https://t.me/fusuf), yusuf@quiec.tech
 
+Idea [SelaxG](https://t.me/SelaxG),
 ## 📒 License
 eksipy is available under the GPLv3 license. See the LICENSE file for more info.
