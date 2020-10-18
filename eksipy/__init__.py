@@ -48,7 +48,7 @@ class Eksi:
         )
         
         soup = BeautifulSoup(
-            bugun, 'lxml'
+            bugun.text, 'lxml'
         )
 
         topics = soup.find('ul', {'class': 'topic-list'}).find_all('li')
@@ -62,8 +62,8 @@ class Eksi:
                     topic_id.find('small').decompose()
                 else:
                     giri_sayi = None
-                baslik = topic_id.text
-                topic_id = topic_id['href'].split('?day=')[0].split('--')[1]
+                baslik = topic_id.text[:-1]
+                topic_id = int(topic_id['href'].split('?day=')[0].split('--')[1])
             else:
                 continue
 
@@ -97,8 +97,8 @@ class Eksi:
             if not topic_id == None:
                 giri_sayi = int(topic_id.find('small').text.strip())
                 topic_id.find('small').decompose()
-                baslik = topic_id.text
-                topic_id = topic_id['href'][1:][:-10].split('--')[1]
+                baslik = topic_id.text[:-1]
+                topic_id = int(topic_id['href'][1:][:-10].split('--')[1])
             else:
                 continue
             
