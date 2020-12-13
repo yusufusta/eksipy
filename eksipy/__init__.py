@@ -58,7 +58,7 @@ class Eksi:
             topic_id = topic.find('a')
             if not topic_id == None:
                 if topic_id.find('small'):
-                    giri_sayi = int(topic_id.find('small').text.strip())
+                    giri_sayi = topic_id.find('small').text.strip()
                     topic_id.find('small').decompose()
                 else:
                     giri_sayi = None
@@ -95,7 +95,7 @@ class Eksi:
         for topic in topics:
             topic_id = topic.find('a')
             if not topic_id == None:
-                giri_sayi = int(topic_id.find('small').text.strip())
+                giri_sayi = topic_id.find('small').text.strip()
                 topic_id.find('small').decompose()
                 baslik = topic_id.text[:-1]
                 topic_id = int(topic_id['href'][1:][:-10].split('--')[1])
