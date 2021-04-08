@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>eksipy.models API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>eksipy.models</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/python
+# -*- coding: utf8 -*-
+
+# Unofficial Ekşi Sözlük private API.
+
+# Copyright (C) 2020 Yusuf Usta
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+
+import re
+import html
+from typing import List
+
+
+class Model(object):
+    def __init__(self, client, **kwargs):
+        self.client = client
+        self.__dict__.update(kwargs)
+
+
+class Message(Model):
+    id = None
+    from_user = None
+    message = None
+    preview = None
+    date = None
+    read = None
+    unread = None
+    thread_id = None
+
+    def __init__(self, client, **kwargs):
+        super().__init__(client, **kwargs)
+
+
+class MessageHistory(Model):
+    incoming = None
+    outgoing = None
+    message = None
+    date = None
+
+
+class Entry(Model):
+    id = None
+    author = None
+    topic = None
+    entry = None
+    date = None
+    edited = None
+    fav_count = None
+    comment = None
+
+    def dict(self):
+        return self.__dict__
+
+    def url(self):
+        return f&#39;https://eksisozluk.com/entry/{self.id}&#39;
+
+    def text(self):
+        &#34;&#34;&#34;
+        Entry yazı haline çevirir.
+        &#34;&#34;&#34;
+
+        _ = self.entry.html()
+        linkler = self.entry(&#34;a&#34;)
+        for link in linkler.items():
+            if link.attr(&#39;class&#39;) == &#34;b&#34;:
+                _ = _.replace(html.unescape(link.outerHtml()),
+                              f&#34;`{link.text()}`&#34;)
+                continue
+            _ = _.replace(link.outerHtml(),
+                          f&#34;[{link.attr(&#39;href&#39;)} {link.text()}]&#34;)
+            _ = html.unescape(_).replace(&#34;&lt;br/&gt;&#34;, &#34;\n&#34;)
+        return _
+
+    def html(self):
+        return self.entry.html()
+
+    def __str__(self):
+        return self.text()  # md(str(self.entry).strip())[1:]
+
+    def fav(self) -&gt; int:
+        &#34;&#34;&#34;
+        Entry favoriler.
+        &#34;&#34;&#34;
+
+        return self.client.favEntry(self)
+
+    def unfav(self) -&gt; int:
+        &#34;&#34;&#34;
+        Entry favorisi kaldırır.
+        &#34;&#34;&#34;
+
+        return self.client.unfavEntry(self)
+
+    def delete(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Entry siler.
+        &#34;&#34;&#34;
+
+        return self.client.deleteEntry(self)
+
+    def up(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Entry upvote atar.
+        &#34;&#34;&#34;
+
+        return self.client.upVoteEntry(self)
+
+    def down(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Entry downvote atar.
+        &#34;&#34;&#34;
+
+        return self.client.downVoteEntry(self)
+
+
+class Topic(Model):
+    id = None
+    title = None
+    giri = None
+    current_page = None
+    max_page = None
+    slug = None
+    url = None
+
+    async def getUrl(self):
+        &#34;&#34;&#34;
+        Başlığın adresini getirir.
+        &#34;&#34;&#34;
+
+        if self.url == None:
+            return (await self.client.convertToTopic(self.title))
+        else:
+            return self.url
+
+    def dict(self):
+        return self.__dict__
+
+    def __str__(self):
+        return self.title
+
+    def __init__(self, client, **kwargs):
+        super().__init__(client, **kwargs)
+
+    def getEntrys(self, page=1, day=None, sukela=None) -&gt; List[Entry]:
+        &#34;&#34;&#34;
+        Başlığın entrylerini getirir.
+        &#34;&#34;&#34;
+
+        return self.client.getEntrys(self, page, day, sukela)
+
+    def sendEntry(self, entry: str, hidden: bool = False) -&gt; Entry:
+        &#34;&#34;&#34;
+        Entry gönderir.
+        &#34;&#34;&#34;
+
+        return self.client.sendEntry(self, entry, hidden)
+
+
+class User(Model):
+    id = None
+    nick = None
+    total_entry = None
+    last_month = None
+    last_week = None
+    today = None
+    last_entry = None
+    pinned_entry = None
+    badges = []
+
+    def url(self):
+        return f&#39;https://eksisozluk.com/biri/{self.nick}&#39;
+
+    def __str__(self):
+        return f&#39;https://eksisozluk.com/biri/{self.nick}&#39;</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="eksipy.models.Entry"><code class="flex name class">
+<span>class <span class="ident">Entry</span></span>
+<span>(</span><span>client, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Entry(Model):
+    id = None
+    author = None
+    topic = None
+    entry = None
+    date = None
+    edited = None
+    fav_count = None
+    comment = None
+
+    def dict(self):
+        return self.__dict__
+
+    def url(self):
+        return f&#39;https://eksisozluk.com/entry/{self.id}&#39;
+
+    def text(self):
+        &#34;&#34;&#34;
+        Entry yazı haline çevirir.
+        &#34;&#34;&#34;
+
+        _ = self.entry.html()
+        linkler = self.entry(&#34;a&#34;)
+        for link in linkler.items():
+            if link.attr(&#39;class&#39;) == &#34;b&#34;:
+                _ = _.replace(html.unescape(link.outerHtml()),
+                              f&#34;`{link.text()}`&#34;)
+                continue
+            _ = _.replace(link.outerHtml(),
+                          f&#34;[{link.attr(&#39;href&#39;)} {link.text()}]&#34;)
+            _ = html.unescape(_).replace(&#34;&lt;br/&gt;&#34;, &#34;\n&#34;)
+        return _
+
+    def html(self):
+        return self.entry.html()
+
+    def __str__(self):
+        return self.text()  # md(str(self.entry).strip())[1:]
+
+    def fav(self) -&gt; int:
+        &#34;&#34;&#34;
+        Entry favoriler.
+        &#34;&#34;&#34;
+
+        return self.client.favEntry(self)
+
+    def unfav(self) -&gt; int:
+        &#34;&#34;&#34;
+        Entry favorisi kaldırır.
+        &#34;&#34;&#34;
+
+        return self.client.unfavEntry(self)
+
+    def delete(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Entry siler.
+        &#34;&#34;&#34;
+
+        return self.client.deleteEntry(self)
+
+    def up(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Entry upvote atar.
+        &#34;&#34;&#34;
+
+        return self.client.upVoteEntry(self)
+
+    def down(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Entry downvote atar.
+        &#34;&#34;&#34;
+
+        return self.client.downVoteEntry(self)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="eksipy.models.Model" href="#eksipy.models.Model">Model</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="eksipy.models.Entry.author"><code class="name">var <span class="ident">author</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.comment"><code class="name">var <span class="ident">comment</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.date"><code class="name">var <span class="ident">date</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.edited"><code class="name">var <span class="ident">edited</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.entry"><code class="name">var <span class="ident">entry</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.fav_count"><code class="name">var <span class="ident">fav_count</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Entry.topic"><code class="name">var <span class="ident">topic</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="eksipy.models.Entry.delete"><code class="name flex">
+<span>def <span class="ident">delete</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry siler.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def delete(self) -&gt; bool:
+    &#34;&#34;&#34;
+    Entry siler.
+    &#34;&#34;&#34;
+
+    return self.client.deleteEntry(self)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.dict"><code class="name flex">
+<span>def <span class="ident">dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dict(self):
+    return self.__dict__</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.down"><code class="name flex">
+<span>def <span class="ident">down</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry downvote atar.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def down(self) -&gt; bool:
+    &#34;&#34;&#34;
+    Entry downvote atar.
+    &#34;&#34;&#34;
+
+    return self.client.downVoteEntry(self)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.fav"><code class="name flex">
+<span>def <span class="ident">fav</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry favoriler.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fav(self) -&gt; int:
+    &#34;&#34;&#34;
+    Entry favoriler.
+    &#34;&#34;&#34;
+
+    return self.client.favEntry(self)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.html"><code class="name flex">
+<span>def <span class="ident">html</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def html(self):
+    return self.entry.html()</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.text"><code class="name flex">
+<span>def <span class="ident">text</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry yazı haline çevirir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def text(self):
+    &#34;&#34;&#34;
+    Entry yazı haline çevirir.
+    &#34;&#34;&#34;
+
+    _ = self.entry.html()
+    linkler = self.entry(&#34;a&#34;)
+    for link in linkler.items():
+        if link.attr(&#39;class&#39;) == &#34;b&#34;:
+            _ = _.replace(html.unescape(link.outerHtml()),
+                          f&#34;`{link.text()}`&#34;)
+            continue
+        _ = _.replace(link.outerHtml(),
+                      f&#34;[{link.attr(&#39;href&#39;)} {link.text()}]&#34;)
+        _ = html.unescape(_).replace(&#34;&lt;br/&gt;&#34;, &#34;\n&#34;)
+    return _</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.unfav"><code class="name flex">
+<span>def <span class="ident">unfav</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry favorisi kaldırır.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def unfav(self) -&gt; int:
+    &#34;&#34;&#34;
+    Entry favorisi kaldırır.
+    &#34;&#34;&#34;
+
+    return self.client.unfavEntry(self)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.up"><code class="name flex">
+<span>def <span class="ident">up</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry upvote atar.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def up(self) -&gt; bool:
+    &#34;&#34;&#34;
+    Entry upvote atar.
+    &#34;&#34;&#34;
+
+    return self.client.upVoteEntry(self)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Entry.url"><code class="name flex">
+<span>def <span class="ident">url</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def url(self):
+    return f&#39;https://eksisozluk.com/entry/{self.id}&#39;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="eksipy.models.Message"><code class="flex name class">
+<span>class <span class="ident">Message</span></span>
+<span>(</span><span>client, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Message(Model):
+    id = None
+    from_user = None
+    message = None
+    preview = None
+    date = None
+    read = None
+    unread = None
+    thread_id = None
+
+    def __init__(self, client, **kwargs):
+        super().__init__(client, **kwargs)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="eksipy.models.Model" href="#eksipy.models.Model">Model</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="eksipy.models.Message.date"><code class="name">var <span class="ident">date</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.from_user"><code class="name">var <span class="ident">from_user</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.message"><code class="name">var <span class="ident">message</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.preview"><code class="name">var <span class="ident">preview</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.read"><code class="name">var <span class="ident">read</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.thread_id"><code class="name">var <span class="ident">thread_id</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Message.unread"><code class="name">var <span class="ident">unread</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="eksipy.models.MessageHistory"><code class="flex name class">
+<span>class <span class="ident">MessageHistory</span></span>
+<span>(</span><span>client, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MessageHistory(Model):
+    incoming = None
+    outgoing = None
+    message = None
+    date = None</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="eksipy.models.Model" href="#eksipy.models.Model">Model</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="eksipy.models.MessageHistory.date"><code class="name">var <span class="ident">date</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.MessageHistory.incoming"><code class="name">var <span class="ident">incoming</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.MessageHistory.message"><code class="name">var <span class="ident">message</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.MessageHistory.outgoing"><code class="name">var <span class="ident">outgoing</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="eksipy.models.Model"><code class="flex name class">
+<span>class <span class="ident">Model</span></span>
+<span>(</span><span>client, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Model(object):
+    def __init__(self, client, **kwargs):
+        self.client = client
+        self.__dict__.update(kwargs)</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="eksipy.models.Entry" href="#eksipy.models.Entry">Entry</a></li>
+<li><a title="eksipy.models.Message" href="#eksipy.models.Message">Message</a></li>
+<li><a title="eksipy.models.MessageHistory" href="#eksipy.models.MessageHistory">MessageHistory</a></li>
+<li><a title="eksipy.models.Topic" href="#eksipy.models.Topic">Topic</a></li>
+<li><a title="eksipy.models.User" href="#eksipy.models.User">User</a></li>
+</ul>
+</dd>
+<dt id="eksipy.models.Topic"><code class="flex name class">
+<span>class <span class="ident">Topic</span></span>
+<span>(</span><span>client, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Topic(Model):
+    id = None
+    title = None
+    giri = None
+    current_page = None
+    max_page = None
+    slug = None
+    url = None
+
+    async def getUrl(self):
+        &#34;&#34;&#34;
+        Başlığın adresini getirir.
+        &#34;&#34;&#34;
+
+        if self.url == None:
+            return (await self.client.convertToTopic(self.title))
+        else:
+            return self.url
+
+    def dict(self):
+        return self.__dict__
+
+    def __str__(self):
+        return self.title
+
+    def __init__(self, client, **kwargs):
+        super().__init__(client, **kwargs)
+
+    def getEntrys(self, page=1, day=None, sukela=None) -&gt; List[Entry]:
+        &#34;&#34;&#34;
+        Başlığın entrylerini getirir.
+        &#34;&#34;&#34;
+
+        return self.client.getEntrys(self, page, day, sukela)
+
+    def sendEntry(self, entry: str, hidden: bool = False) -&gt; Entry:
+        &#34;&#34;&#34;
+        Entry gönderir.
+        &#34;&#34;&#34;
+
+        return self.client.sendEntry(self, entry, hidden)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="eksipy.models.Model" href="#eksipy.models.Model">Model</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="eksipy.models.Topic.current_page"><code class="name">var <span class="ident">current_page</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Topic.giri"><code class="name">var <span class="ident">giri</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Topic.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Topic.max_page"><code class="name">var <span class="ident">max_page</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Topic.slug"><code class="name">var <span class="ident">slug</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Topic.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.Topic.url"><code class="name">var <span class="ident">url</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="eksipy.models.Topic.dict"><code class="name flex">
+<span>def <span class="ident">dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dict(self):
+    return self.__dict__</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Topic.getEntrys"><code class="name flex">
+<span>def <span class="ident">getEntrys</span></span>(<span>self, page=1, day=None, sukela=None) ‑> List[<a title="eksipy.models.Entry" href="#eksipy.models.Entry">Entry</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Başlığın entrylerini getirir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getEntrys(self, page=1, day=None, sukela=None) -&gt; List[Entry]:
+    &#34;&#34;&#34;
+    Başlığın entrylerini getirir.
+    &#34;&#34;&#34;
+
+    return self.client.getEntrys(self, page, day, sukela)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Topic.getUrl"><code class="name flex">
+<span>async def <span class="ident">getUrl</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Başlığın adresini getirir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def getUrl(self):
+    &#34;&#34;&#34;
+    Başlığın adresini getirir.
+    &#34;&#34;&#34;
+
+    if self.url == None:
+        return (await self.client.convertToTopic(self.title))
+    else:
+        return self.url</code></pre>
+</details>
+</dd>
+<dt id="eksipy.models.Topic.sendEntry"><code class="name flex">
+<span>def <span class="ident">sendEntry</span></span>(<span>self, entry: str, hidden: bool = False) ‑> <a title="eksipy.models.Entry" href="#eksipy.models.Entry">Entry</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry gönderir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def sendEntry(self, entry: str, hidden: bool = False) -&gt; Entry:
+    &#34;&#34;&#34;
+    Entry gönderir.
+    &#34;&#34;&#34;
+
+    return self.client.sendEntry(self, entry, hidden)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="eksipy.models.User"><code class="flex name class">
+<span>class <span class="ident">User</span></span>
+<span>(</span><span>client, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class User(Model):
+    id = None
+    nick = None
+    total_entry = None
+    last_month = None
+    last_week = None
+    today = None
+    last_entry = None
+    pinned_entry = None
+    badges = []
+
+    def url(self):
+        return f&#39;https://eksisozluk.com/biri/{self.nick}&#39;
+
+    def __str__(self):
+        return f&#39;https://eksisozluk.com/biri/{self.nick}&#39;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="eksipy.models.Model" href="#eksipy.models.Model">Model</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="eksipy.models.User.badges"><code class="name">var <span class="ident">badges</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.last_entry"><code class="name">var <span class="ident">last_entry</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.last_month"><code class="name">var <span class="ident">last_month</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.last_week"><code class="name">var <span class="ident">last_week</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.nick"><code class="name">var <span class="ident">nick</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.pinned_entry"><code class="name">var <span class="ident">pinned_entry</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.today"><code class="name">var <span class="ident">today</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="eksipy.models.User.total_entry"><code class="name">var <span class="ident">total_entry</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="eksipy.models.User.url"><code class="name flex">
+<span>def <span class="ident">url</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def url(self):
+    return f&#39;https://eksisozluk.com/biri/{self.nick}&#39;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="eksipy" href="index.html">eksipy</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="eksipy.models.Entry" href="#eksipy.models.Entry">Entry</a></code></h4>
+<ul class="two-column">
+<li><code><a title="eksipy.models.Entry.author" href="#eksipy.models.Entry.author">author</a></code></li>
+<li><code><a title="eksipy.models.Entry.comment" href="#eksipy.models.Entry.comment">comment</a></code></li>
+<li><code><a title="eksipy.models.Entry.date" href="#eksipy.models.Entry.date">date</a></code></li>
+<li><code><a title="eksipy.models.Entry.delete" href="#eksipy.models.Entry.delete">delete</a></code></li>
+<li><code><a title="eksipy.models.Entry.dict" href="#eksipy.models.Entry.dict">dict</a></code></li>
+<li><code><a title="eksipy.models.Entry.down" href="#eksipy.models.Entry.down">down</a></code></li>
+<li><code><a title="eksipy.models.Entry.edited" href="#eksipy.models.Entry.edited">edited</a></code></li>
+<li><code><a title="eksipy.models.Entry.entry" href="#eksipy.models.Entry.entry">entry</a></code></li>
+<li><code><a title="eksipy.models.Entry.fav" href="#eksipy.models.Entry.fav">fav</a></code></li>
+<li><code><a title="eksipy.models.Entry.fav_count" href="#eksipy.models.Entry.fav_count">fav_count</a></code></li>
+<li><code><a title="eksipy.models.Entry.html" href="#eksipy.models.Entry.html">html</a></code></li>
+<li><code><a title="eksipy.models.Entry.id" href="#eksipy.models.Entry.id">id</a></code></li>
+<li><code><a title="eksipy.models.Entry.text" href="#eksipy.models.Entry.text">text</a></code></li>
+<li><code><a title="eksipy.models.Entry.topic" href="#eksipy.models.Entry.topic">topic</a></code></li>
+<li><code><a title="eksipy.models.Entry.unfav" href="#eksipy.models.Entry.unfav">unfav</a></code></li>
+<li><code><a title="eksipy.models.Entry.up" href="#eksipy.models.Entry.up">up</a></code></li>
+<li><code><a title="eksipy.models.Entry.url" href="#eksipy.models.Entry.url">url</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eksipy.models.Message" href="#eksipy.models.Message">Message</a></code></h4>
+<ul class="two-column">
+<li><code><a title="eksipy.models.Message.date" href="#eksipy.models.Message.date">date</a></code></li>
+<li><code><a title="eksipy.models.Message.from_user" href="#eksipy.models.Message.from_user">from_user</a></code></li>
+<li><code><a title="eksipy.models.Message.id" href="#eksipy.models.Message.id">id</a></code></li>
+<li><code><a title="eksipy.models.Message.message" href="#eksipy.models.Message.message">message</a></code></li>
+<li><code><a title="eksipy.models.Message.preview" href="#eksipy.models.Message.preview">preview</a></code></li>
+<li><code><a title="eksipy.models.Message.read" href="#eksipy.models.Message.read">read</a></code></li>
+<li><code><a title="eksipy.models.Message.thread_id" href="#eksipy.models.Message.thread_id">thread_id</a></code></li>
+<li><code><a title="eksipy.models.Message.unread" href="#eksipy.models.Message.unread">unread</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eksipy.models.MessageHistory" href="#eksipy.models.MessageHistory">MessageHistory</a></code></h4>
+<ul class="">
+<li><code><a title="eksipy.models.MessageHistory.date" href="#eksipy.models.MessageHistory.date">date</a></code></li>
+<li><code><a title="eksipy.models.MessageHistory.incoming" href="#eksipy.models.MessageHistory.incoming">incoming</a></code></li>
+<li><code><a title="eksipy.models.MessageHistory.message" href="#eksipy.models.MessageHistory.message">message</a></code></li>
+<li><code><a title="eksipy.models.MessageHistory.outgoing" href="#eksipy.models.MessageHistory.outgoing">outgoing</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eksipy.models.Model" href="#eksipy.models.Model">Model</a></code></h4>
+</li>
+<li>
+<h4><code><a title="eksipy.models.Topic" href="#eksipy.models.Topic">Topic</a></code></h4>
+<ul class="two-column">
+<li><code><a title="eksipy.models.Topic.current_page" href="#eksipy.models.Topic.current_page">current_page</a></code></li>
+<li><code><a title="eksipy.models.Topic.dict" href="#eksipy.models.Topic.dict">dict</a></code></li>
+<li><code><a title="eksipy.models.Topic.getEntrys" href="#eksipy.models.Topic.getEntrys">getEntrys</a></code></li>
+<li><code><a title="eksipy.models.Topic.getUrl" href="#eksipy.models.Topic.getUrl">getUrl</a></code></li>
+<li><code><a title="eksipy.models.Topic.giri" href="#eksipy.models.Topic.giri">giri</a></code></li>
+<li><code><a title="eksipy.models.Topic.id" href="#eksipy.models.Topic.id">id</a></code></li>
+<li><code><a title="eksipy.models.Topic.max_page" href="#eksipy.models.Topic.max_page">max_page</a></code></li>
+<li><code><a title="eksipy.models.Topic.sendEntry" href="#eksipy.models.Topic.sendEntry">sendEntry</a></code></li>
+<li><code><a title="eksipy.models.Topic.slug" href="#eksipy.models.Topic.slug">slug</a></code></li>
+<li><code><a title="eksipy.models.Topic.title" href="#eksipy.models.Topic.title">title</a></code></li>
+<li><code><a title="eksipy.models.Topic.url" href="#eksipy.models.Topic.url">url</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eksipy.models.User" href="#eksipy.models.User">User</a></code></h4>
+<ul class="two-column">
+<li><code><a title="eksipy.models.User.badges" href="#eksipy.models.User.badges">badges</a></code></li>
+<li><code><a title="eksipy.models.User.id" href="#eksipy.models.User.id">id</a></code></li>
+<li><code><a title="eksipy.models.User.last_entry" href="#eksipy.models.User.last_entry">last_entry</a></code></li>
+<li><code><a title="eksipy.models.User.last_month" href="#eksipy.models.User.last_month">last_month</a></code></li>
+<li><code><a title="eksipy.models.User.last_week" href="#eksipy.models.User.last_week">last_week</a></code></li>
+<li><code><a title="eksipy.models.User.nick" href="#eksipy.models.User.nick">nick</a></code></li>
+<li><code><a title="eksipy.models.User.pinned_entry" href="#eksipy.models.User.pinned_entry">pinned_entry</a></code></li>
+<li><code><a title="eksipy.models.User.today" href="#eksipy.models.User.today">today</a></code></li>
+<li><code><a title="eksipy.models.User.total_entry" href="#eksipy.models.User.total_entry">total_entry</a></code></li>
+<li><code><a title="eksipy.models.User.url" href="#eksipy.models.User.url">url</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

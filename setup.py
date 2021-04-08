@@ -1,21 +1,21 @@
 from setuptools import setup
 import sys
 
-required = ['requests', 'markdownify', 'bs4', 'unidecode', 'fake_useragent', 'lxml']
+required = ['requests-html', 'requests']
 long_description = ""
 with open('README.md') as f:
     long_description += f.read()
 
 setup(
     name='eksipy',
-    version='1.0.2',
+    version='2.0.1',
     description='Unofficial API for Eksi Sozluk.',
     long_description=long_description,
     author='Yusuf Usta',
-    author_email='yusuf@fusuf.codes',
+    author_email='yusuf@usta.email',
     maintainer='Yusuf Usta',
-    maintainer_email='yusuf@fusuf.codes',
-    url='https://github.com/quiec/EksiPy',
+    maintainer_email='yusuf@usta.email',
+    url='https://github.com/yusufusta/EksiPy',
     license='GPL3',
     packages=['eksipy'],
     install_requires=required,

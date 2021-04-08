@@ -1,0 +1,1815 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>eksipy API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>eksipy</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/python
+# -*- coding: utf8 -*-
+
+# Unofficial Ekşi Sözlük private API.
+
+# Copyright (C) 2021 Yusuf Usta
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+
+
+import json
+from requests_html import AsyncHTMLSession, HTML
+from requests import utils, Session
+from requests.models import PreparedRequest
+from datetime import datetime
+from time import mktime
+import os
+import http
+from eksipy.models import *
+from typing import Union, List
+
+
+class Eksi:
+    def __init__(self, session: AsyncHTMLSession = None, config={&#34;EKSI_URL&#34;: &#34;https://eksisozluk.com/&#34;}):
+        &#34;&#34;&#34;
+        Sınıfı başlatır.
+        &#34;&#34;&#34;
+
+        if session == None:
+            self.session = AsyncHTMLSession()
+        else:
+            if isinstance(session, AsyncHTMLSession):
+                self.session = session
+            else:
+                self.session = AsyncHTMLSession()
+        self.config = config
+        self.eksi = self.config[&#34;EKSI_URL&#34;]
+
+    def addParamsToUrl(self, url: str, params: dict) -&gt; str:
+        &#34;&#34;&#34;
+        Belirtilen parametreleri adrese ekler.
+        &#34;&#34;&#34;
+
+        req = PreparedRequest()
+        req.prepare_url(url, params)
+        return req.url
+
+    async def bugun(self, page=1) -&gt; List[Topic]:
+        &#34;&#34;&#34;
+        Ekşi Sözlükteki bugün bölümü çeker.
+        &#34;&#34;&#34;
+
+        bugun = await self.session.get(
+            f&#39;{self.eksi}basliklar/bugun/{page}&amp;_=0&#39;
+        )
+
+        topics = bugun.html.find(
+            &#39;#content-body &gt; ul&#39;, first=True).find(&#34;a&#34;)
+        basliklar = []
+
+        for topic in topics:
+            topic_id = topic.find(&#39;a&#39;, first=True).pq
+            if not topic_id == None:
+                if topic_id.find(&#39;small&#39;):
+                    giri_sayi = topic_id(&#39;small&#39;).text()
+                    topic_id(&#39;small&#39;).remove()
+                else:
+                    giri_sayi = None
+                baslik = topic_id.text()
+                topic_id = int(topic_id(&#34;a&#34;).attr(&#34;href&#34;).split(
+                    &#39;?day=&#39;)[0].split(&#39;--&#39;)[1])
+            else:
+                continue
+
+            basliklar.append(
+                Topic(
+                    self,
+                    id=topic_id,
+                    title=baslik,
+                    giri=giri_sayi
+                )
+            )
+        return basliklar
+
+    async def convertToTopic(self, title) -&gt; str:
+        &#34;&#34;&#34;
+        Yazdığınız kelimeleri başlığa çevirir.
+        &#34;&#34;&#34;
+
+        istek = await self.session.get(self.eksi + &#34;?q=&#34; + title)
+        if istek.status_code != 404:
+            return istek.url
+        else:
+            return False
+
+    async def getEntrys(self, baslik: Topic, page=1, day=None, sukela=None) -&gt; List[Entry]:
+        &#34;&#34;&#34;
+        Verdiğiniz başlığın entrylerini çeker.
+        &#34;&#34;&#34;
+
+        url = await baslik.getUrl()
+        url = self.addParamsToUrl(url, {&#34;p&#34;: page})
+        if not day == None:
+            url = self.addParamsToUrl(url, {&#34;day&#34;: day})
+        if not sukela == None:
+            url = self.addParamsToUrl(url, {&#34;a&#34;: sukela})
+
+        topic = await self.session.get(
+            url
+        )
+
+        topic = topic.html.find(&#34;#topic&#34;, first=True)
+        entrys = topic.find(&#34;#entry-item-list&#34;, first=True).find(&#34;li&#34;)
+        giriler = []
+        for entry in entrys:
+            giriler.append(
+                Entry(
+                    self,
+                    id=entry.attrs[&#39;data-id&#39;],
+                    author=User(
+                        self,
+                        id=entry.attrs[&#39;data-author-id&#39;], nick=entry.attrs[&#39;data-author&#39;]),
+                    entry=entry.pq(&#34;.content&#34;),
+                    topic=baslik,
+                    date=&#34;&#34;,
+                    edited=False,
+                    fav_count=entry.attrs[&#39;data-favorite-count&#39;],
+                    comment=entry.attrs[&#39;data-comment-count&#39;],
+                )
+            )
+        return giriler
+
+    async def getEntry(self, entry: int) -&gt; Entry:
+        &#34;&#34;&#34;
+        Belirli bir entry çeker.
+        &#34;&#34;&#34;
+
+        url = self.eksi + &#34;entry/&#34; + str(entry)
+        topic = await self.session.get(
+            url
+        )
+
+        topic = topic.html.find(&#34;#topic&#34;, first=True)
+        entry = topic.find(&#34;#entry-item-list&#34;, first=True).find(&#34;li&#34;)[0]
+        tarih = entry.find(
+            &#34;footer &gt; div.info &gt; a.entry-date.permalink&#34;, first=True).text
+        duzenleme, tarih = self.convertToDate(tarih)
+        return Entry(
+            self,
+            id=entry.attrs[&#39;data-id&#39;],
+            author=User(
+                self,
+                id=entry.attrs[&#39;data-author-id&#39;], nick=entry.attrs[&#39;data-author&#39;]),
+            entry=entry.pq(&#34;.content&#34;),
+            date=tarih,
+            edited=duzenleme,
+            fav_count=entry.attrs[&#39;data-favorite-count&#39;],
+            comment=entry.attrs[&#39;data-comment-count&#39;],
+        )
+
+    def convertToDate(self, date: str) -&gt; str:
+        &#34;&#34;&#34;
+        Ekşi Sözlük zamanını unix time çevirir.
+        &#34;&#34;&#34;
+
+        if &#39;~&#39; in date:
+            parcalama = date.split(&#39;~&#39;)
+            parcalama[0] = parcalama[0].strip()
+            parcalama[1] = parcalama[1].strip()
+
+            tarih = round(
+                mktime(datetime.strptime(
+                       parcalama[0], &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in parcalama[0] else &#34;%d.%m.%Y&#34;).timetuple())
+            )
+
+            if &#39;.&#39; in parcalama[1]:
+                duzenleme = round(
+                    mktime(datetime.strptime(
+                        parcalama[1], &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in parcalama[1] else &#34;%d.%m.%Y&#34;).timetuple())
+                )
+            else:
+                duzenleme = round(
+                    mktime(datetime.strptime(
+                        f&#34;{parcalama[0].split(&#39; &#39;)[0]} {parcalama[1]}&#34;, &#34;%d.%m.%Y %H:%M&#34;).timetuple())
+                )
+        else:
+            duzenleme = False
+            tarih = mktime(datetime.strptime(
+                date, &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in date else &#34;%d.%m.%Y&#34;).timetuple())
+        return duzenleme, tarih
+
+    async def gundem(self, page=1) -&gt; List[Topic]:
+        &#34;&#34;&#34;
+        Gündem feedini çeker
+        &#34;&#34;&#34;
+
+        gundem = await self.session.get(
+            f&#39;{self.eksi}basliklar/gundem?p={page}&#39;
+        )
+
+        topics = gundem.html.find(
+            &#39;#content-body &gt; ul&#39;, first=True).find(&#34;a&#34;)
+        basliklar = []
+
+        for topic in topics:
+            topic_id = topic.find(&#39;a&#39;, first=True).pq
+            if not topic_id == None:
+                if topic_id.find(&#39;small&#39;):
+                    giri_sayi = topic_id(&#39;small&#39;).text()
+                    topic_id(&#39;small&#39;).remove()
+                else:
+                    giri_sayi = None
+                baslik = topic_id.text()
+                topic_id = int(topic_id(&#34;a&#34;).attr(&#34;href&#34;).split(
+                    &#39;?a=&#39;)[0].split(&#39;--&#39;)[1])
+            else:
+                continue
+
+            basliklar.append(
+                Topic(
+                    self,
+                    id=topic_id,
+                    title=baslik,
+                    giri=giri_sayi
+                )
+            )
+        return basliklar
+
+    async def debe(self) -&gt; List[Entry]:
+        &#34;&#34;&#34;
+        Debe bölümünü çeker
+        &#34;&#34;&#34;
+
+        gundem = await self.session.get(
+            f&#39;{self.eksi}/debe&#39;
+        )
+
+        topics = gundem.html.find(
+            &#39;#content-body &gt; ul&#39;, first=True).find(&#34;li&#34;)
+        basliklar = []
+
+        for topic in topics:
+            topic = topic.find(&#34;a&#34;, first=True)
+            basliklar.append(
+                Entry(
+                    self,
+                    id=int(topic.attrs[&#39;href&#39;].split(&#39;/entry/&#39;)[1]),
+                    topic=Topic(self, title=topic.text)
+                )
+            )
+        return basliklar
+
+    async def login(self, username: str, password: str):
+        &#34;&#34;&#34;
+        Ekşi Sözlüğe giriş yapar.
+        &#34;&#34;&#34;
+
+        giris = await self.session.get(f&#34;{self.eksi}giris&#34;, headers={
+            &#39;User-Agent&#39;: &#34;PostmanRuntime/7.26.10&#34;
+        })
+        rvt = giris.html.find(
+            &#39;input[name=&#34;__RequestVerificationToken&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        login = await self.session.request(&#34;POST&#34;,
+                                           &#34;https://eksisozluk.com/giris&#34;,
+                                           data={
+                                               &#34;UserName&#34;: username,
+                                               &#34;Password&#34;: password,
+                                               &#34;__RequestVerificationToken&#34;: rvt,
+                                               &#34;RememberMe&#34;: &#34;true&#34;,
+                                               &#34;ReturnUrl&#34;: &#34;https%3A%2F%2Feksisozluk.com%2F&#34;
+                                           },
+                                           headers={
+                                               &#39;User-Agent&#39;: &#34;PostmanRuntime/7.26.10&#34;,
+                                               &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39;,
+                                           }
+                                           )
+
+        cookies = utils.dict_from_cookiejar(self.session.cookies)
+        if &#34;a&#34; in cookies:
+            self.User = username
+            return True  # user
+        else:
+            if login.status_code == 404:
+                raise Exception(
+                    &#34;giriş yaparken captcha geldi herhal. bi login sayfasına bakın.&#34;)
+            else:
+                raise Exception(
+                    f&#34;{login.status_code}: giriş başarısırız.&#34;)
+
+    def saveSession(self, location=None):
+        &#34;&#34;&#34;
+        Ekşi Sözlük cookieslerini bir dosyaya kaydeder. Tekrar giriş yapmak için vakit harcanmaz.
+        &#34;&#34;&#34;
+
+        cookies = []
+        for c in self.session.cookies:
+            cookies.append({
+                &#34;name&#34;: c.name,
+                &#34;value&#34;: c.value,
+                &#34;domain&#34;: c.domain,
+                &#34;path&#34;: c.path,
+                &#34;expires&#34;: c.expires
+            })
+        if location == None:
+            if not os.path.exists(&#34;sessions&#34;):
+                os.mkdir(&#34;sessions&#34;)
+            location = os.path.join(&#34;sessions&#34;, f&#34;{self.User}.json&#34;)
+            veri = json.dumps(cookies)
+            open(location, &#34;w+&#34;).write(veri)
+        else:
+            veri = json.dumps(cookies)
+            open(location, &#34;w+&#34;).write(veri)
+        return location
+
+    def loadSession(self, location):
+        &#34;&#34;&#34;
+        Ekşi Sözlük cookiesleri yükler.
+        &#34;&#34;&#34;
+
+        veriler = json.loads(open(location, &#34;r&#34;).read())
+        for c in veriler:
+            self.session.cookies.set(**c)
+        return True
+
+    async def sendEntry(self, topic: Topic, entry: str, hidden: bool = False):
+        &#34;&#34;&#34;
+        Entry gönderir.
+        &#34;&#34;&#34;
+
+        page = await self.session.get(await topic.getUrl())
+
+        ReqVerTok = page.html.find(
+            &#39;input[name=&#34;__RequestVerificationToken&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        Title = page.html.find(
+            &#39;input[name=&#34;Title&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        Id = page.html.find(
+            &#39;input[name=&#34;Id&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        InputStartTime = page.html.find(
+            &#39;input[name=&#34;InputStartTime&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+
+        istek = await self.session.request(&#34;POST&#34;,
+                                           f&#34;https://eksisozluk.com/entry/ekle&#34;,
+                                           data={
+                                               &#39;Title&#39;: Title,
+                                               &#39;Id&#39;: Id,
+                                               &#39;__RequestVerificationToken&#39;: ReqVerTok,
+                                               &#39;ReturnUrl&#39;: &#39;&#39;,
+                                               &#39;Content&#39;: entry,
+                                               &#39;InputStartTime&#39;: InputStartTime,
+                                               &#39;AddAsHidden&#39;: &#39;true&#39; if hidden else &#39;false&#39;
+                                           },
+                                           headers={&#34;user-agent&#34;: &#34;PostmanRuntime/7.26.10&#34;,
+                                                    &#34;content-type&#34;: &#34;application/x-www-form-urlencoded&#34;},
+                                           allow_redirects=False
+                                           )
+
+        if istek.status_code == 302:
+            entry = istek.headers[&#39;location&#39;].split(&#39;/&#39;)[2]
+            return (await self.getEntry(entry))
+        else:
+            if istek.status_code == 404:
+                raise Exception(
+                    f&#34;{istek.status_code}: muhtemelen böyle bir entry var ondan gönderemiyoruz. siz gene de bir bakın.&#34;)
+            else:
+                raise Exception(f&#34;{istek.status_code}: bir hata oluştu.&#34;)
+
+    async def getTopic(self, title) -&gt; Topic:
+        &#34;&#34;&#34;
+        Başlık getirir.
+        &#34;&#34;&#34;
+
+        adres = await self.convertToTopic(title)
+        if adres != False:
+            baslik = await self.session.get(adres)
+            title = baslik.html.find(&#34;#title&#34;, first=True)
+            pager = baslik.html.find(&#34;div[class=&#39;pager&#39;]&#34;, first=True)
+
+            return Topic(
+                self,
+                id=int(title.attrs[&#39;data-id&#39;]),
+                title=title.attrs[&#39;data-title&#39;],
+                max_page=int(pager.attrs[&#39;data-pagecount&#39;]),
+                current_page=int(pager.attrs[&#39;data-currentpage&#39;]),
+                slug=title.attrs[&#39;data-slug&#39;],
+                url=adres
+            )
+        else:
+            raise Exception(&#34;404: böyle bir başlık yok.&#34;)
+
+    async def favEntry(self, entry: Union[Entry, int]):
+        &#34;&#34;&#34;
+        Entry favoriler.
+        &#34;&#34;&#34;
+
+        anaistek = await self.session.post(
+            f&#34;{self.eksi}entry/favla&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;entryId&#39;: entry.id if isinstance(entry, Entry) else entry
+            },
+            allow_redirects=False
+        )
+
+        istek = anaistek.json()
+        if istek[&#39;Success&#39;] == True:
+            return istek[&#39;Count&#39;]
+        else:
+            raise Exception(f&#39;{anaistek.status_code}: {istek[&#34;ErrorMessage&#34;]}&#39;)
+
+    async def unfavEntry(self, entry: Union[Entry, int]):
+        &#34;&#34;&#34;
+        Entry favorisi kaldırır.
+        &#34;&#34;&#34;
+
+        anaistek = await self.session.post(
+            f&#34;{self.eksi}entry/favlama&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;entryId&#39;: entry.id if isinstance(entry, Entry) else entry
+            },
+            allow_redirects=False
+        )
+
+        istek = anaistek.json()
+        if istek[&#39;Success&#39;] == True:
+            return istek[&#39;Count&#39;]
+        else:
+            raise Exception(f&#39;{anaistek.status_code}: {istek[&#34;ErrorMessage&#34;]}&#39;)
+
+    async def deleteEntry(self, entry: Union[Entry, int]):
+        &#34;&#34;&#34;
+        Entry siler.
+        &#34;&#34;&#34;
+
+        istek = await self.session.post(
+            f&#34;{self.eksi}entry/sil&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;id&#39;: entry.id if isinstance(entry, Entry) else entry
+            },
+            allow_redirects=False
+        )
+
+        if istek.status_code == 200:
+            return True
+        else:
+            raise Exception(
+                f&#39;{istek.status_code}: kesinlikle bir şeyler oldu.&#39;)
+
+    async def autoComplete(self, text: str):
+        istek = await self.session.get(
+            f&#39;{self.eksi}autocomplete/query?q={text}&amp;_=0&#39;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            }
+        )
+        return istek.json()
+
+    async def upVoteEntry(self, entry: Entry):
+        &#34;&#34;&#34;
+        Upvote atar.
+        &#34;&#34;&#34;
+
+        istek = await self.session.post(
+            f&#34;{self.eksi}entry/vote&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;id&#39;: entry.id,
+                &#39;rate&#39;: 1,
+                &#39;owner&#39;: entry.author_id
+            },
+            allow_redirects=False
+        )
+        istek = istek.json()
+
+        return istek[&#39;Success&#39;]
+
+    async def downVoteEntry(self, entry: Entry):
+        &#34;&#34;&#34;
+        Downvote atar.
+        &#34;&#34;&#34;
+
+        istek = await self.session.post(
+            f&#34;{self.eksi}entry/vote&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;id&#39;: entry.id,
+                &#39;rate&#39;: -1,
+                &#39;owner&#39;: entry.author_id
+            },
+            allow_redirects=False
+        )
+        istek = istek.json()
+
+        return istek[&#39;Success&#39;]
+
+    async def isLogged(self):
+        homepage = await self.session.get(
+            self.eksi
+        )
+
+        try:
+            homepage.html.find(
+                &#39;li[class=&#34;not-mobile&#34;]&#39;, first=True).find(&#39;a&#39;, first=True).attrs[&#39;title&#39;]
+            return True
+        except:
+            return False</code></pre>
+</details>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="eksipy.models" href="models.html">eksipy.models</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="eksipy.Eksi"><code class="flex name class">
+<span>class <span class="ident">Eksi</span></span>
+<span>(</span><span>session: requests_html.AsyncHTMLSession = None, config={'EKSI_URL': 'https://eksisozluk.com/'})</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sınıfı başlatır.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Eksi:
+    def __init__(self, session: AsyncHTMLSession = None, config={&#34;EKSI_URL&#34;: &#34;https://eksisozluk.com/&#34;}):
+        &#34;&#34;&#34;
+        Sınıfı başlatır.
+        &#34;&#34;&#34;
+
+        if session == None:
+            self.session = AsyncHTMLSession()
+        else:
+            if isinstance(session, AsyncHTMLSession):
+                self.session = session
+            else:
+                self.session = AsyncHTMLSession()
+        self.config = config
+        self.eksi = self.config[&#34;EKSI_URL&#34;]
+
+    def addParamsToUrl(self, url: str, params: dict) -&gt; str:
+        &#34;&#34;&#34;
+        Belirtilen parametreleri adrese ekler.
+        &#34;&#34;&#34;
+
+        req = PreparedRequest()
+        req.prepare_url(url, params)
+        return req.url
+
+    async def bugun(self, page=1) -&gt; List[Topic]:
+        &#34;&#34;&#34;
+        Ekşi Sözlükteki bugün bölümü çeker.
+        &#34;&#34;&#34;
+
+        bugun = await self.session.get(
+            f&#39;{self.eksi}basliklar/bugun/{page}&amp;_=0&#39;
+        )
+
+        topics = bugun.html.find(
+            &#39;#content-body &gt; ul&#39;, first=True).find(&#34;a&#34;)
+        basliklar = []
+
+        for topic in topics:
+            topic_id = topic.find(&#39;a&#39;, first=True).pq
+            if not topic_id == None:
+                if topic_id.find(&#39;small&#39;):
+                    giri_sayi = topic_id(&#39;small&#39;).text()
+                    topic_id(&#39;small&#39;).remove()
+                else:
+                    giri_sayi = None
+                baslik = topic_id.text()
+                topic_id = int(topic_id(&#34;a&#34;).attr(&#34;href&#34;).split(
+                    &#39;?day=&#39;)[0].split(&#39;--&#39;)[1])
+            else:
+                continue
+
+            basliklar.append(
+                Topic(
+                    self,
+                    id=topic_id,
+                    title=baslik,
+                    giri=giri_sayi
+                )
+            )
+        return basliklar
+
+    async def convertToTopic(self, title) -&gt; str:
+        &#34;&#34;&#34;
+        Yazdığınız kelimeleri başlığa çevirir.
+        &#34;&#34;&#34;
+
+        istek = await self.session.get(self.eksi + &#34;?q=&#34; + title)
+        if istek.status_code != 404:
+            return istek.url
+        else:
+            return False
+
+    async def getEntrys(self, baslik: Topic, page=1, day=None, sukela=None) -&gt; List[Entry]:
+        &#34;&#34;&#34;
+        Verdiğiniz başlığın entrylerini çeker.
+        &#34;&#34;&#34;
+
+        url = await baslik.getUrl()
+        url = self.addParamsToUrl(url, {&#34;p&#34;: page})
+        if not day == None:
+            url = self.addParamsToUrl(url, {&#34;day&#34;: day})
+        if not sukela == None:
+            url = self.addParamsToUrl(url, {&#34;a&#34;: sukela})
+
+        topic = await self.session.get(
+            url
+        )
+
+        topic = topic.html.find(&#34;#topic&#34;, first=True)
+        entrys = topic.find(&#34;#entry-item-list&#34;, first=True).find(&#34;li&#34;)
+        giriler = []
+        for entry in entrys:
+            giriler.append(
+                Entry(
+                    self,
+                    id=entry.attrs[&#39;data-id&#39;],
+                    author=User(
+                        self,
+                        id=entry.attrs[&#39;data-author-id&#39;], nick=entry.attrs[&#39;data-author&#39;]),
+                    entry=entry.pq(&#34;.content&#34;),
+                    topic=baslik,
+                    date=&#34;&#34;,
+                    edited=False,
+                    fav_count=entry.attrs[&#39;data-favorite-count&#39;],
+                    comment=entry.attrs[&#39;data-comment-count&#39;],
+                )
+            )
+        return giriler
+
+    async def getEntry(self, entry: int) -&gt; Entry:
+        &#34;&#34;&#34;
+        Belirli bir entry çeker.
+        &#34;&#34;&#34;
+
+        url = self.eksi + &#34;entry/&#34; + str(entry)
+        topic = await self.session.get(
+            url
+        )
+
+        topic = topic.html.find(&#34;#topic&#34;, first=True)
+        entry = topic.find(&#34;#entry-item-list&#34;, first=True).find(&#34;li&#34;)[0]
+        tarih = entry.find(
+            &#34;footer &gt; div.info &gt; a.entry-date.permalink&#34;, first=True).text
+        duzenleme, tarih = self.convertToDate(tarih)
+        return Entry(
+            self,
+            id=entry.attrs[&#39;data-id&#39;],
+            author=User(
+                self,
+                id=entry.attrs[&#39;data-author-id&#39;], nick=entry.attrs[&#39;data-author&#39;]),
+            entry=entry.pq(&#34;.content&#34;),
+            date=tarih,
+            edited=duzenleme,
+            fav_count=entry.attrs[&#39;data-favorite-count&#39;],
+            comment=entry.attrs[&#39;data-comment-count&#39;],
+        )
+
+    def convertToDate(self, date: str) -&gt; str:
+        &#34;&#34;&#34;
+        Ekşi Sözlük zamanını unix time çevirir.
+        &#34;&#34;&#34;
+
+        if &#39;~&#39; in date:
+            parcalama = date.split(&#39;~&#39;)
+            parcalama[0] = parcalama[0].strip()
+            parcalama[1] = parcalama[1].strip()
+
+            tarih = round(
+                mktime(datetime.strptime(
+                       parcalama[0], &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in parcalama[0] else &#34;%d.%m.%Y&#34;).timetuple())
+            )
+
+            if &#39;.&#39; in parcalama[1]:
+                duzenleme = round(
+                    mktime(datetime.strptime(
+                        parcalama[1], &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in parcalama[1] else &#34;%d.%m.%Y&#34;).timetuple())
+                )
+            else:
+                duzenleme = round(
+                    mktime(datetime.strptime(
+                        f&#34;{parcalama[0].split(&#39; &#39;)[0]} {parcalama[1]}&#34;, &#34;%d.%m.%Y %H:%M&#34;).timetuple())
+                )
+        else:
+            duzenleme = False
+            tarih = mktime(datetime.strptime(
+                date, &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in date else &#34;%d.%m.%Y&#34;).timetuple())
+        return duzenleme, tarih
+
+    async def gundem(self, page=1) -&gt; List[Topic]:
+        &#34;&#34;&#34;
+        Gündem feedini çeker
+        &#34;&#34;&#34;
+
+        gundem = await self.session.get(
+            f&#39;{self.eksi}basliklar/gundem?p={page}&#39;
+        )
+
+        topics = gundem.html.find(
+            &#39;#content-body &gt; ul&#39;, first=True).find(&#34;a&#34;)
+        basliklar = []
+
+        for topic in topics:
+            topic_id = topic.find(&#39;a&#39;, first=True).pq
+            if not topic_id == None:
+                if topic_id.find(&#39;small&#39;):
+                    giri_sayi = topic_id(&#39;small&#39;).text()
+                    topic_id(&#39;small&#39;).remove()
+                else:
+                    giri_sayi = None
+                baslik = topic_id.text()
+                topic_id = int(topic_id(&#34;a&#34;).attr(&#34;href&#34;).split(
+                    &#39;?a=&#39;)[0].split(&#39;--&#39;)[1])
+            else:
+                continue
+
+            basliklar.append(
+                Topic(
+                    self,
+                    id=topic_id,
+                    title=baslik,
+                    giri=giri_sayi
+                )
+            )
+        return basliklar
+
+    async def debe(self) -&gt; List[Entry]:
+        &#34;&#34;&#34;
+        Debe bölümünü çeker
+        &#34;&#34;&#34;
+
+        gundem = await self.session.get(
+            f&#39;{self.eksi}/debe&#39;
+        )
+
+        topics = gundem.html.find(
+            &#39;#content-body &gt; ul&#39;, first=True).find(&#34;li&#34;)
+        basliklar = []
+
+        for topic in topics:
+            topic = topic.find(&#34;a&#34;, first=True)
+            basliklar.append(
+                Entry(
+                    self,
+                    id=int(topic.attrs[&#39;href&#39;].split(&#39;/entry/&#39;)[1]),
+                    topic=Topic(self, title=topic.text)
+                )
+            )
+        return basliklar
+
+    async def login(self, username: str, password: str):
+        &#34;&#34;&#34;
+        Ekşi Sözlüğe giriş yapar.
+        &#34;&#34;&#34;
+
+        giris = await self.session.get(f&#34;{self.eksi}giris&#34;, headers={
+            &#39;User-Agent&#39;: &#34;PostmanRuntime/7.26.10&#34;
+        })
+        rvt = giris.html.find(
+            &#39;input[name=&#34;__RequestVerificationToken&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        login = await self.session.request(&#34;POST&#34;,
+                                           &#34;https://eksisozluk.com/giris&#34;,
+                                           data={
+                                               &#34;UserName&#34;: username,
+                                               &#34;Password&#34;: password,
+                                               &#34;__RequestVerificationToken&#34;: rvt,
+                                               &#34;RememberMe&#34;: &#34;true&#34;,
+                                               &#34;ReturnUrl&#34;: &#34;https%3A%2F%2Feksisozluk.com%2F&#34;
+                                           },
+                                           headers={
+                                               &#39;User-Agent&#39;: &#34;PostmanRuntime/7.26.10&#34;,
+                                               &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39;,
+                                           }
+                                           )
+
+        cookies = utils.dict_from_cookiejar(self.session.cookies)
+        if &#34;a&#34; in cookies:
+            self.User = username
+            return True  # user
+        else:
+            if login.status_code == 404:
+                raise Exception(
+                    &#34;giriş yaparken captcha geldi herhal. bi login sayfasına bakın.&#34;)
+            else:
+                raise Exception(
+                    f&#34;{login.status_code}: giriş başarısırız.&#34;)
+
+    def saveSession(self, location=None):
+        &#34;&#34;&#34;
+        Ekşi Sözlük cookieslerini bir dosyaya kaydeder. Tekrar giriş yapmak için vakit harcanmaz.
+        &#34;&#34;&#34;
+
+        cookies = []
+        for c in self.session.cookies:
+            cookies.append({
+                &#34;name&#34;: c.name,
+                &#34;value&#34;: c.value,
+                &#34;domain&#34;: c.domain,
+                &#34;path&#34;: c.path,
+                &#34;expires&#34;: c.expires
+            })
+        if location == None:
+            if not os.path.exists(&#34;sessions&#34;):
+                os.mkdir(&#34;sessions&#34;)
+            location = os.path.join(&#34;sessions&#34;, f&#34;{self.User}.json&#34;)
+            veri = json.dumps(cookies)
+            open(location, &#34;w+&#34;).write(veri)
+        else:
+            veri = json.dumps(cookies)
+            open(location, &#34;w+&#34;).write(veri)
+        return location
+
+    def loadSession(self, location):
+        &#34;&#34;&#34;
+        Ekşi Sözlük cookiesleri yükler.
+        &#34;&#34;&#34;
+
+        veriler = json.loads(open(location, &#34;r&#34;).read())
+        for c in veriler:
+            self.session.cookies.set(**c)
+        return True
+
+    async def sendEntry(self, topic: Topic, entry: str, hidden: bool = False):
+        &#34;&#34;&#34;
+        Entry gönderir.
+        &#34;&#34;&#34;
+
+        page = await self.session.get(await topic.getUrl())
+
+        ReqVerTok = page.html.find(
+            &#39;input[name=&#34;__RequestVerificationToken&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        Title = page.html.find(
+            &#39;input[name=&#34;Title&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        Id = page.html.find(
+            &#39;input[name=&#34;Id&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+        InputStartTime = page.html.find(
+            &#39;input[name=&#34;InputStartTime&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+
+        istek = await self.session.request(&#34;POST&#34;,
+                                           f&#34;https://eksisozluk.com/entry/ekle&#34;,
+                                           data={
+                                               &#39;Title&#39;: Title,
+                                               &#39;Id&#39;: Id,
+                                               &#39;__RequestVerificationToken&#39;: ReqVerTok,
+                                               &#39;ReturnUrl&#39;: &#39;&#39;,
+                                               &#39;Content&#39;: entry,
+                                               &#39;InputStartTime&#39;: InputStartTime,
+                                               &#39;AddAsHidden&#39;: &#39;true&#39; if hidden else &#39;false&#39;
+                                           },
+                                           headers={&#34;user-agent&#34;: &#34;PostmanRuntime/7.26.10&#34;,
+                                                    &#34;content-type&#34;: &#34;application/x-www-form-urlencoded&#34;},
+                                           allow_redirects=False
+                                           )
+
+        if istek.status_code == 302:
+            entry = istek.headers[&#39;location&#39;].split(&#39;/&#39;)[2]
+            return (await self.getEntry(entry))
+        else:
+            if istek.status_code == 404:
+                raise Exception(
+                    f&#34;{istek.status_code}: muhtemelen böyle bir entry var ondan gönderemiyoruz. siz gene de bir bakın.&#34;)
+            else:
+                raise Exception(f&#34;{istek.status_code}: bir hata oluştu.&#34;)
+
+    async def getTopic(self, title) -&gt; Topic:
+        &#34;&#34;&#34;
+        Başlık getirir.
+        &#34;&#34;&#34;
+
+        adres = await self.convertToTopic(title)
+        if adres != False:
+            baslik = await self.session.get(adres)
+            title = baslik.html.find(&#34;#title&#34;, first=True)
+            pager = baslik.html.find(&#34;div[class=&#39;pager&#39;]&#34;, first=True)
+
+            return Topic(
+                self,
+                id=int(title.attrs[&#39;data-id&#39;]),
+                title=title.attrs[&#39;data-title&#39;],
+                max_page=int(pager.attrs[&#39;data-pagecount&#39;]),
+                current_page=int(pager.attrs[&#39;data-currentpage&#39;]),
+                slug=title.attrs[&#39;data-slug&#39;],
+                url=adres
+            )
+        else:
+            raise Exception(&#34;404: böyle bir başlık yok.&#34;)
+
+    async def favEntry(self, entry: Union[Entry, int]):
+        &#34;&#34;&#34;
+        Entry favoriler.
+        &#34;&#34;&#34;
+
+        anaistek = await self.session.post(
+            f&#34;{self.eksi}entry/favla&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;entryId&#39;: entry.id if isinstance(entry, Entry) else entry
+            },
+            allow_redirects=False
+        )
+
+        istek = anaistek.json()
+        if istek[&#39;Success&#39;] == True:
+            return istek[&#39;Count&#39;]
+        else:
+            raise Exception(f&#39;{anaistek.status_code}: {istek[&#34;ErrorMessage&#34;]}&#39;)
+
+    async def unfavEntry(self, entry: Union[Entry, int]):
+        &#34;&#34;&#34;
+        Entry favorisi kaldırır.
+        &#34;&#34;&#34;
+
+        anaistek = await self.session.post(
+            f&#34;{self.eksi}entry/favlama&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;entryId&#39;: entry.id if isinstance(entry, Entry) else entry
+            },
+            allow_redirects=False
+        )
+
+        istek = anaistek.json()
+        if istek[&#39;Success&#39;] == True:
+            return istek[&#39;Count&#39;]
+        else:
+            raise Exception(f&#39;{anaistek.status_code}: {istek[&#34;ErrorMessage&#34;]}&#39;)
+
+    async def deleteEntry(self, entry: Union[Entry, int]):
+        &#34;&#34;&#34;
+        Entry siler.
+        &#34;&#34;&#34;
+
+        istek = await self.session.post(
+            f&#34;{self.eksi}entry/sil&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;id&#39;: entry.id if isinstance(entry, Entry) else entry
+            },
+            allow_redirects=False
+        )
+
+        if istek.status_code == 200:
+            return True
+        else:
+            raise Exception(
+                f&#39;{istek.status_code}: kesinlikle bir şeyler oldu.&#39;)
+
+    async def autoComplete(self, text: str):
+        istek = await self.session.get(
+            f&#39;{self.eksi}autocomplete/query?q={text}&amp;_=0&#39;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            }
+        )
+        return istek.json()
+
+    async def upVoteEntry(self, entry: Entry):
+        &#34;&#34;&#34;
+        Upvote atar.
+        &#34;&#34;&#34;
+
+        istek = await self.session.post(
+            f&#34;{self.eksi}entry/vote&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;id&#39;: entry.id,
+                &#39;rate&#39;: 1,
+                &#39;owner&#39;: entry.author_id
+            },
+            allow_redirects=False
+        )
+        istek = istek.json()
+
+        return istek[&#39;Success&#39;]
+
+    async def downVoteEntry(self, entry: Entry):
+        &#34;&#34;&#34;
+        Downvote atar.
+        &#34;&#34;&#34;
+
+        istek = await self.session.post(
+            f&#34;{self.eksi}entry/vote&#34;,
+            headers={
+                &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+            },
+            data={
+                &#39;id&#39;: entry.id,
+                &#39;rate&#39;: -1,
+                &#39;owner&#39;: entry.author_id
+            },
+            allow_redirects=False
+        )
+        istek = istek.json()
+
+        return istek[&#39;Success&#39;]
+
+    async def isLogged(self):
+        homepage = await self.session.get(
+            self.eksi
+        )
+
+        try:
+            homepage.html.find(
+                &#39;li[class=&#34;not-mobile&#34;]&#39;, first=True).find(&#39;a&#39;, first=True).attrs[&#39;title&#39;]
+            return True
+        except:
+            return False</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eksipy.Eksi.addParamsToUrl"><code class="name flex">
+<span>def <span class="ident">addParamsToUrl</span></span>(<span>self, url: str, params: dict) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Belirtilen parametreleri adrese ekler.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addParamsToUrl(self, url: str, params: dict) -&gt; str:
+    &#34;&#34;&#34;
+    Belirtilen parametreleri adrese ekler.
+    &#34;&#34;&#34;
+
+    req = PreparedRequest()
+    req.prepare_url(url, params)
+    return req.url</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.autoComplete"><code class="name flex">
+<span>async def <span class="ident">autoComplete</span></span>(<span>self, text: str)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def autoComplete(self, text: str):
+    istek = await self.session.get(
+        f&#39;{self.eksi}autocomplete/query?q={text}&amp;_=0&#39;,
+        headers={
+            &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+        }
+    )
+    return istek.json()</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.bugun"><code class="name flex">
+<span>async def <span class="ident">bugun</span></span>(<span>self, page=1) ‑> List[<a title="eksipy.models.Topic" href="models.html#eksipy.models.Topic">Topic</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ekşi Sözlükteki bugün bölümü çeker.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def bugun(self, page=1) -&gt; List[Topic]:
+    &#34;&#34;&#34;
+    Ekşi Sözlükteki bugün bölümü çeker.
+    &#34;&#34;&#34;
+
+    bugun = await self.session.get(
+        f&#39;{self.eksi}basliklar/bugun/{page}&amp;_=0&#39;
+    )
+
+    topics = bugun.html.find(
+        &#39;#content-body &gt; ul&#39;, first=True).find(&#34;a&#34;)
+    basliklar = []
+
+    for topic in topics:
+        topic_id = topic.find(&#39;a&#39;, first=True).pq
+        if not topic_id == None:
+            if topic_id.find(&#39;small&#39;):
+                giri_sayi = topic_id(&#39;small&#39;).text()
+                topic_id(&#39;small&#39;).remove()
+            else:
+                giri_sayi = None
+            baslik = topic_id.text()
+            topic_id = int(topic_id(&#34;a&#34;).attr(&#34;href&#34;).split(
+                &#39;?day=&#39;)[0].split(&#39;--&#39;)[1])
+        else:
+            continue
+
+        basliklar.append(
+            Topic(
+                self,
+                id=topic_id,
+                title=baslik,
+                giri=giri_sayi
+            )
+        )
+    return basliklar</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.convertToDate"><code class="name flex">
+<span>def <span class="ident">convertToDate</span></span>(<span>self, date: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ekşi Sözlük zamanını unix time çevirir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convertToDate(self, date: str) -&gt; str:
+    &#34;&#34;&#34;
+    Ekşi Sözlük zamanını unix time çevirir.
+    &#34;&#34;&#34;
+
+    if &#39;~&#39; in date:
+        parcalama = date.split(&#39;~&#39;)
+        parcalama[0] = parcalama[0].strip()
+        parcalama[1] = parcalama[1].strip()
+
+        tarih = round(
+            mktime(datetime.strptime(
+                   parcalama[0], &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in parcalama[0] else &#34;%d.%m.%Y&#34;).timetuple())
+        )
+
+        if &#39;.&#39; in parcalama[1]:
+            duzenleme = round(
+                mktime(datetime.strptime(
+                    parcalama[1], &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in parcalama[1] else &#34;%d.%m.%Y&#34;).timetuple())
+            )
+        else:
+            duzenleme = round(
+                mktime(datetime.strptime(
+                    f&#34;{parcalama[0].split(&#39; &#39;)[0]} {parcalama[1]}&#34;, &#34;%d.%m.%Y %H:%M&#34;).timetuple())
+            )
+    else:
+        duzenleme = False
+        tarih = mktime(datetime.strptime(
+            date, &#34;%d.%m.%Y %H:%M&#34; if &#39;:&#39; in date else &#34;%d.%m.%Y&#34;).timetuple())
+    return duzenleme, tarih</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.convertToTopic"><code class="name flex">
+<span>async def <span class="ident">convertToTopic</span></span>(<span>self, title) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Yazdığınız kelimeleri başlığa çevirir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def convertToTopic(self, title) -&gt; str:
+    &#34;&#34;&#34;
+    Yazdığınız kelimeleri başlığa çevirir.
+    &#34;&#34;&#34;
+
+    istek = await self.session.get(self.eksi + &#34;?q=&#34; + title)
+    if istek.status_code != 404:
+        return istek.url
+    else:
+        return False</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.debe"><code class="name flex">
+<span>async def <span class="ident">debe</span></span>(<span>self) ‑> List[<a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Debe bölümünü çeker</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def debe(self) -&gt; List[Entry]:
+    &#34;&#34;&#34;
+    Debe bölümünü çeker
+    &#34;&#34;&#34;
+
+    gundem = await self.session.get(
+        f&#39;{self.eksi}/debe&#39;
+    )
+
+    topics = gundem.html.find(
+        &#39;#content-body &gt; ul&#39;, first=True).find(&#34;li&#34;)
+    basliklar = []
+
+    for topic in topics:
+        topic = topic.find(&#34;a&#34;, first=True)
+        basliklar.append(
+            Entry(
+                self,
+                id=int(topic.attrs[&#39;href&#39;].split(&#39;/entry/&#39;)[1]),
+                topic=Topic(self, title=topic.text)
+            )
+        )
+    return basliklar</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.deleteEntry"><code class="name flex">
+<span>async def <span class="ident">deleteEntry</span></span>(<span>self, entry: Union[<a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>, int])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry siler.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def deleteEntry(self, entry: Union[Entry, int]):
+    &#34;&#34;&#34;
+    Entry siler.
+    &#34;&#34;&#34;
+
+    istek = await self.session.post(
+        f&#34;{self.eksi}entry/sil&#34;,
+        headers={
+            &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+        },
+        data={
+            &#39;id&#39;: entry.id if isinstance(entry, Entry) else entry
+        },
+        allow_redirects=False
+    )
+
+    if istek.status_code == 200:
+        return True
+    else:
+        raise Exception(
+            f&#39;{istek.status_code}: kesinlikle bir şeyler oldu.&#39;)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.downVoteEntry"><code class="name flex">
+<span>async def <span class="ident">downVoteEntry</span></span>(<span>self, entry: <a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Downvote atar.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def downVoteEntry(self, entry: Entry):
+    &#34;&#34;&#34;
+    Downvote atar.
+    &#34;&#34;&#34;
+
+    istek = await self.session.post(
+        f&#34;{self.eksi}entry/vote&#34;,
+        headers={
+            &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+        },
+        data={
+            &#39;id&#39;: entry.id,
+            &#39;rate&#39;: -1,
+            &#39;owner&#39;: entry.author_id
+        },
+        allow_redirects=False
+    )
+    istek = istek.json()
+
+    return istek[&#39;Success&#39;]</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.favEntry"><code class="name flex">
+<span>async def <span class="ident">favEntry</span></span>(<span>self, entry: Union[<a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>, int])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry favoriler.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def favEntry(self, entry: Union[Entry, int]):
+    &#34;&#34;&#34;
+    Entry favoriler.
+    &#34;&#34;&#34;
+
+    anaistek = await self.session.post(
+        f&#34;{self.eksi}entry/favla&#34;,
+        headers={
+            &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+        },
+        data={
+            &#39;entryId&#39;: entry.id if isinstance(entry, Entry) else entry
+        },
+        allow_redirects=False
+    )
+
+    istek = anaistek.json()
+    if istek[&#39;Success&#39;] == True:
+        return istek[&#39;Count&#39;]
+    else:
+        raise Exception(f&#39;{anaistek.status_code}: {istek[&#34;ErrorMessage&#34;]}&#39;)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.getEntry"><code class="name flex">
+<span>async def <span class="ident">getEntry</span></span>(<span>self, entry: int) ‑> <a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Belirli bir entry çeker.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def getEntry(self, entry: int) -&gt; Entry:
+    &#34;&#34;&#34;
+    Belirli bir entry çeker.
+    &#34;&#34;&#34;
+
+    url = self.eksi + &#34;entry/&#34; + str(entry)
+    topic = await self.session.get(
+        url
+    )
+
+    topic = topic.html.find(&#34;#topic&#34;, first=True)
+    entry = topic.find(&#34;#entry-item-list&#34;, first=True).find(&#34;li&#34;)[0]
+    tarih = entry.find(
+        &#34;footer &gt; div.info &gt; a.entry-date.permalink&#34;, first=True).text
+    duzenleme, tarih = self.convertToDate(tarih)
+    return Entry(
+        self,
+        id=entry.attrs[&#39;data-id&#39;],
+        author=User(
+            self,
+            id=entry.attrs[&#39;data-author-id&#39;], nick=entry.attrs[&#39;data-author&#39;]),
+        entry=entry.pq(&#34;.content&#34;),
+        date=tarih,
+        edited=duzenleme,
+        fav_count=entry.attrs[&#39;data-favorite-count&#39;],
+        comment=entry.attrs[&#39;data-comment-count&#39;],
+    )</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.getEntrys"><code class="name flex">
+<span>async def <span class="ident">getEntrys</span></span>(<span>self, baslik: <a title="eksipy.models.Topic" href="models.html#eksipy.models.Topic">Topic</a>, page=1, day=None, sukela=None) ‑> List[<a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Verdiğiniz başlığın entrylerini çeker.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def getEntrys(self, baslik: Topic, page=1, day=None, sukela=None) -&gt; List[Entry]:
+    &#34;&#34;&#34;
+    Verdiğiniz başlığın entrylerini çeker.
+    &#34;&#34;&#34;
+
+    url = await baslik.getUrl()
+    url = self.addParamsToUrl(url, {&#34;p&#34;: page})
+    if not day == None:
+        url = self.addParamsToUrl(url, {&#34;day&#34;: day})
+    if not sukela == None:
+        url = self.addParamsToUrl(url, {&#34;a&#34;: sukela})
+
+    topic = await self.session.get(
+        url
+    )
+
+    topic = topic.html.find(&#34;#topic&#34;, first=True)
+    entrys = topic.find(&#34;#entry-item-list&#34;, first=True).find(&#34;li&#34;)
+    giriler = []
+    for entry in entrys:
+        giriler.append(
+            Entry(
+                self,
+                id=entry.attrs[&#39;data-id&#39;],
+                author=User(
+                    self,
+                    id=entry.attrs[&#39;data-author-id&#39;], nick=entry.attrs[&#39;data-author&#39;]),
+                entry=entry.pq(&#34;.content&#34;),
+                topic=baslik,
+                date=&#34;&#34;,
+                edited=False,
+                fav_count=entry.attrs[&#39;data-favorite-count&#39;],
+                comment=entry.attrs[&#39;data-comment-count&#39;],
+            )
+        )
+    return giriler</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.getTopic"><code class="name flex">
+<span>async def <span class="ident">getTopic</span></span>(<span>self, title) ‑> <a title="eksipy.models.Topic" href="models.html#eksipy.models.Topic">Topic</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Başlık getirir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def getTopic(self, title) -&gt; Topic:
+    &#34;&#34;&#34;
+    Başlık getirir.
+    &#34;&#34;&#34;
+
+    adres = await self.convertToTopic(title)
+    if adres != False:
+        baslik = await self.session.get(adres)
+        title = baslik.html.find(&#34;#title&#34;, first=True)
+        pager = baslik.html.find(&#34;div[class=&#39;pager&#39;]&#34;, first=True)
+
+        return Topic(
+            self,
+            id=int(title.attrs[&#39;data-id&#39;]),
+            title=title.attrs[&#39;data-title&#39;],
+            max_page=int(pager.attrs[&#39;data-pagecount&#39;]),
+            current_page=int(pager.attrs[&#39;data-currentpage&#39;]),
+            slug=title.attrs[&#39;data-slug&#39;],
+            url=adres
+        )
+    else:
+        raise Exception(&#34;404: böyle bir başlık yok.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.gundem"><code class="name flex">
+<span>async def <span class="ident">gundem</span></span>(<span>self, page=1) ‑> List[<a title="eksipy.models.Topic" href="models.html#eksipy.models.Topic">Topic</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gündem feedini çeker</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def gundem(self, page=1) -&gt; List[Topic]:
+    &#34;&#34;&#34;
+    Gündem feedini çeker
+    &#34;&#34;&#34;
+
+    gundem = await self.session.get(
+        f&#39;{self.eksi}basliklar/gundem?p={page}&#39;
+    )
+
+    topics = gundem.html.find(
+        &#39;#content-body &gt; ul&#39;, first=True).find(&#34;a&#34;)
+    basliklar = []
+
+    for topic in topics:
+        topic_id = topic.find(&#39;a&#39;, first=True).pq
+        if not topic_id == None:
+            if topic_id.find(&#39;small&#39;):
+                giri_sayi = topic_id(&#39;small&#39;).text()
+                topic_id(&#39;small&#39;).remove()
+            else:
+                giri_sayi = None
+            baslik = topic_id.text()
+            topic_id = int(topic_id(&#34;a&#34;).attr(&#34;href&#34;).split(
+                &#39;?a=&#39;)[0].split(&#39;--&#39;)[1])
+        else:
+            continue
+
+        basliklar.append(
+            Topic(
+                self,
+                id=topic_id,
+                title=baslik,
+                giri=giri_sayi
+            )
+        )
+    return basliklar</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.isLogged"><code class="name flex">
+<span>async def <span class="ident">isLogged</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def isLogged(self):
+    homepage = await self.session.get(
+        self.eksi
+    )
+
+    try:
+        homepage.html.find(
+            &#39;li[class=&#34;not-mobile&#34;]&#39;, first=True).find(&#39;a&#39;, first=True).attrs[&#39;title&#39;]
+        return True
+    except:
+        return False</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.loadSession"><code class="name flex">
+<span>def <span class="ident">loadSession</span></span>(<span>self, location)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ekşi Sözlük cookiesleri yükler.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def loadSession(self, location):
+    &#34;&#34;&#34;
+    Ekşi Sözlük cookiesleri yükler.
+    &#34;&#34;&#34;
+
+    veriler = json.loads(open(location, &#34;r&#34;).read())
+    for c in veriler:
+        self.session.cookies.set(**c)
+    return True</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.login"><code class="name flex">
+<span>async def <span class="ident">login</span></span>(<span>self, username: str, password: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ekşi Sözlüğe giriş yapar.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def login(self, username: str, password: str):
+    &#34;&#34;&#34;
+    Ekşi Sözlüğe giriş yapar.
+    &#34;&#34;&#34;
+
+    giris = await self.session.get(f&#34;{self.eksi}giris&#34;, headers={
+        &#39;User-Agent&#39;: &#34;PostmanRuntime/7.26.10&#34;
+    })
+    rvt = giris.html.find(
+        &#39;input[name=&#34;__RequestVerificationToken&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+    login = await self.session.request(&#34;POST&#34;,
+                                       &#34;https://eksisozluk.com/giris&#34;,
+                                       data={
+                                           &#34;UserName&#34;: username,
+                                           &#34;Password&#34;: password,
+                                           &#34;__RequestVerificationToken&#34;: rvt,
+                                           &#34;RememberMe&#34;: &#34;true&#34;,
+                                           &#34;ReturnUrl&#34;: &#34;https%3A%2F%2Feksisozluk.com%2F&#34;
+                                       },
+                                       headers={
+                                           &#39;User-Agent&#39;: &#34;PostmanRuntime/7.26.10&#34;,
+                                           &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39;,
+                                       }
+                                       )
+
+    cookies = utils.dict_from_cookiejar(self.session.cookies)
+    if &#34;a&#34; in cookies:
+        self.User = username
+        return True  # user
+    else:
+        if login.status_code == 404:
+            raise Exception(
+                &#34;giriş yaparken captcha geldi herhal. bi login sayfasına bakın.&#34;)
+        else:
+            raise Exception(
+                f&#34;{login.status_code}: giriş başarısırız.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.saveSession"><code class="name flex">
+<span>def <span class="ident">saveSession</span></span>(<span>self, location=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ekşi Sözlük cookieslerini bir dosyaya kaydeder. Tekrar giriş yapmak için vakit harcanmaz.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveSession(self, location=None):
+    &#34;&#34;&#34;
+    Ekşi Sözlük cookieslerini bir dosyaya kaydeder. Tekrar giriş yapmak için vakit harcanmaz.
+    &#34;&#34;&#34;
+
+    cookies = []
+    for c in self.session.cookies:
+        cookies.append({
+            &#34;name&#34;: c.name,
+            &#34;value&#34;: c.value,
+            &#34;domain&#34;: c.domain,
+            &#34;path&#34;: c.path,
+            &#34;expires&#34;: c.expires
+        })
+    if location == None:
+        if not os.path.exists(&#34;sessions&#34;):
+            os.mkdir(&#34;sessions&#34;)
+        location = os.path.join(&#34;sessions&#34;, f&#34;{self.User}.json&#34;)
+        veri = json.dumps(cookies)
+        open(location, &#34;w+&#34;).write(veri)
+    else:
+        veri = json.dumps(cookies)
+        open(location, &#34;w+&#34;).write(veri)
+    return location</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.sendEntry"><code class="name flex">
+<span>async def <span class="ident">sendEntry</span></span>(<span>self, topic: <a title="eksipy.models.Topic" href="models.html#eksipy.models.Topic">Topic</a>, entry: str, hidden: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry gönderir.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def sendEntry(self, topic: Topic, entry: str, hidden: bool = False):
+    &#34;&#34;&#34;
+    Entry gönderir.
+    &#34;&#34;&#34;
+
+    page = await self.session.get(await topic.getUrl())
+
+    ReqVerTok = page.html.find(
+        &#39;input[name=&#34;__RequestVerificationToken&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+    Title = page.html.find(
+        &#39;input[name=&#34;Title&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+    Id = page.html.find(
+        &#39;input[name=&#34;Id&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+    InputStartTime = page.html.find(
+        &#39;input[name=&#34;InputStartTime&#34;]&#39;, first=True).attrs[&#39;value&#39;]
+
+    istek = await self.session.request(&#34;POST&#34;,
+                                       f&#34;https://eksisozluk.com/entry/ekle&#34;,
+                                       data={
+                                           &#39;Title&#39;: Title,
+                                           &#39;Id&#39;: Id,
+                                           &#39;__RequestVerificationToken&#39;: ReqVerTok,
+                                           &#39;ReturnUrl&#39;: &#39;&#39;,
+                                           &#39;Content&#39;: entry,
+                                           &#39;InputStartTime&#39;: InputStartTime,
+                                           &#39;AddAsHidden&#39;: &#39;true&#39; if hidden else &#39;false&#39;
+                                       },
+                                       headers={&#34;user-agent&#34;: &#34;PostmanRuntime/7.26.10&#34;,
+                                                &#34;content-type&#34;: &#34;application/x-www-form-urlencoded&#34;},
+                                       allow_redirects=False
+                                       )
+
+    if istek.status_code == 302:
+        entry = istek.headers[&#39;location&#39;].split(&#39;/&#39;)[2]
+        return (await self.getEntry(entry))
+    else:
+        if istek.status_code == 404:
+            raise Exception(
+                f&#34;{istek.status_code}: muhtemelen böyle bir entry var ondan gönderemiyoruz. siz gene de bir bakın.&#34;)
+        else:
+            raise Exception(f&#34;{istek.status_code}: bir hata oluştu.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.unfavEntry"><code class="name flex">
+<span>async def <span class="ident">unfavEntry</span></span>(<span>self, entry: Union[<a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>, int])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Entry favorisi kaldırır.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def unfavEntry(self, entry: Union[Entry, int]):
+    &#34;&#34;&#34;
+    Entry favorisi kaldırır.
+    &#34;&#34;&#34;
+
+    anaistek = await self.session.post(
+        f&#34;{self.eksi}entry/favlama&#34;,
+        headers={
+            &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+        },
+        data={
+            &#39;entryId&#39;: entry.id if isinstance(entry, Entry) else entry
+        },
+        allow_redirects=False
+    )
+
+    istek = anaistek.json()
+    if istek[&#39;Success&#39;] == True:
+        return istek[&#39;Count&#39;]
+    else:
+        raise Exception(f&#39;{anaistek.status_code}: {istek[&#34;ErrorMessage&#34;]}&#39;)</code></pre>
+</details>
+</dd>
+<dt id="eksipy.Eksi.upVoteEntry"><code class="name flex">
+<span>async def <span class="ident">upVoteEntry</span></span>(<span>self, entry: <a title="eksipy.models.Entry" href="models.html#eksipy.models.Entry">Entry</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Upvote atar.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def upVoteEntry(self, entry: Entry):
+    &#34;&#34;&#34;
+    Upvote atar.
+    &#34;&#34;&#34;
+
+    istek = await self.session.post(
+        f&#34;{self.eksi}entry/vote&#34;,
+        headers={
+            &#39;x-requested-with&#39;: &#39;XMLHttpRequest&#39;
+        },
+        data={
+            &#39;id&#39;: entry.id,
+            &#39;rate&#39;: 1,
+            &#39;owner&#39;: entry.author_id
+        },
+        allow_redirects=False
+    )
+    istek = istek.json()
+
+    return istek[&#39;Success&#39;]</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="eksipy.models" href="models.html">eksipy.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="eksipy.Eksi" href="#eksipy.Eksi">Eksi</a></code></h4>
+<ul class="two-column">
+<li><code><a title="eksipy.Eksi.addParamsToUrl" href="#eksipy.Eksi.addParamsToUrl">addParamsToUrl</a></code></li>
+<li><code><a title="eksipy.Eksi.autoComplete" href="#eksipy.Eksi.autoComplete">autoComplete</a></code></li>
+<li><code><a title="eksipy.Eksi.bugun" href="#eksipy.Eksi.bugun">bugun</a></code></li>
+<li><code><a title="eksipy.Eksi.convertToDate" href="#eksipy.Eksi.convertToDate">convertToDate</a></code></li>
+<li><code><a title="eksipy.Eksi.convertToTopic" href="#eksipy.Eksi.convertToTopic">convertToTopic</a></code></li>
+<li><code><a title="eksipy.Eksi.debe" href="#eksipy.Eksi.debe">debe</a></code></li>
+<li><code><a title="eksipy.Eksi.deleteEntry" href="#eksipy.Eksi.deleteEntry">deleteEntry</a></code></li>
+<li><code><a title="eksipy.Eksi.downVoteEntry" href="#eksipy.Eksi.downVoteEntry">downVoteEntry</a></code></li>
+<li><code><a title="eksipy.Eksi.favEntry" href="#eksipy.Eksi.favEntry">favEntry</a></code></li>
+<li><code><a title="eksipy.Eksi.getEntry" href="#eksipy.Eksi.getEntry">getEntry</a></code></li>
+<li><code><a title="eksipy.Eksi.getEntrys" href="#eksipy.Eksi.getEntrys">getEntrys</a></code></li>
+<li><code><a title="eksipy.Eksi.getTopic" href="#eksipy.Eksi.getTopic">getTopic</a></code></li>
+<li><code><a title="eksipy.Eksi.gundem" href="#eksipy.Eksi.gundem">gundem</a></code></li>
+<li><code><a title="eksipy.Eksi.isLogged" href="#eksipy.Eksi.isLogged">isLogged</a></code></li>
+<li><code><a title="eksipy.Eksi.loadSession" href="#eksipy.Eksi.loadSession">loadSession</a></code></li>
+<li><code><a title="eksipy.Eksi.login" href="#eksipy.Eksi.login">login</a></code></li>
+<li><code><a title="eksipy.Eksi.saveSession" href="#eksipy.Eksi.saveSession">saveSession</a></code></li>
+<li><code><a title="eksipy.Eksi.sendEntry" href="#eksipy.Eksi.sendEntry">sendEntry</a></code></li>
+<li><code><a title="eksipy.Eksi.unfavEntry" href="#eksipy.Eksi.unfavEntry">unfavEntry</a></code></li>
+<li><code><a title="eksipy.Eksi.upVoteEntry" href="#eksipy.Eksi.upVoteEntry">upVoteEntry</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
+
 # Unofficial Ekşi Sözlük private API.
 
 # Copyright (C) 2020 Yusuf Usta

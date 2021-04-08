@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
+
 # Unofficial Ekşi Sözlük private API.
 
 # Copyright (C) 2020 Yusuf Usta
@@ -15,13 +18,16 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from unidecode import unidecode
 import re
-from markdownify import markdownify as md
+import html
+from typing import List
+
 
 class Model(object):
-    def __init__(self, **kwargs):
+    def __init__(self, client, **kwargs):
+        self.client = client
         self.__dict__.update(kwargs)
+
 
 class Message(Model):
     id = None
@@ -33,11 +39,91 @@ class Message(Model):
     unread = None
     thread_id = None
 
+    def __init__(self, client, **kwargs):
+        super().__init__(client, **kwargs)
+
+
 class MessageHistory(Model):
     incoming = None
     outgoing = None
     message = None
     date = None
+
+
+class Entry(Model):
+    id = None
+    author = None
+    topic = None
+    entry = None
+    date = None
+    edited = None
+    fav_count = None
+    comment = None
+
+    def dict(self):
+        return self.__dict__
+
+    def url(self):
+        return f'https://eksisozluk.com/entry/{self.id}'
+
+    def text(self):
+        """
+        Entry yazı haline çevirir.
+        """
+
+        _ = self.entry.html()
+        linkler = self.entry("a")
+        for link in linkler.items():
+            if link.attr('class') == "b":
+                _ = _.replace(html.unescape(link.outerHtml()),
+                              f"`{link.text()}`")
+                continue
+            _ = _.replace(link.outerHtml(),
+                          f"[{link.attr('href')} {link.text()}]")
+            _ = html.unescape(_).replace("<br/>", "\n")
+        return _
+
+    def html(self):
+        return self.entry.html()
+
+    def __str__(self):
+        return self.text()  # md(str(self.entry).strip())[1:]
+
+    def fav(self) -> int:
+        """
+        Entry favoriler.
+        """
+
+        return self.client.favEntry(self)
+
+    def unfav(self) -> int:
+        """
+        Entry favorisi kaldırır.
+        """
+
+        return self.client.unfavEntry(self)
+
+    def delete(self) -> bool:
+        """
+        Entry siler.
+        """
+
+        return self.client.deleteEntry(self)
+
+    def up(self) -> bool:
+        """
+        Entry upvote atar.
+        """
+
+        return self.client.upVoteEntry(self)
+
+    def down(self) -> bool:
+        """
+        Entry downvote atar.
+        """
+
+        return self.client.downVoteEntry(self)
+
 
 class Topic(Model):
     id = None
@@ -45,63 +131,42 @@ class Topic(Model):
     giri = None
     current_page = None
     max_page = None
+    slug = None
+    url = None
 
-    def url(self):
-        if id == None:
-            return f'https://eksisozluk.com/?q={self.title}'
+    async def getUrl(self):
+        """
+        Başlığın adresini getirir.
+        """
+
+        if self.url == None:
+            return (await self.client.convertToTopic(self.title))
         else:
-            bosluk = unidecode(self.title).replace(" ", "-")
-            baslik = re.sub('[^A-Za-z0-9-]+', '', bosluk)
-            return f'https://eksisozluk.com/{baslik}--{self.id}'
-
-    def slug(self):
-        bosluk = unidecode(self.title).replace(" ", "-")
-        baslik = re.sub('[^A-Za-z0-9-]+', '', bosluk)
-        return baslik
-
-    def __str__(self):
-        if id == None:
-            return f'https://eksisozluk.com/?q={self.title}'
-        else:
-            bosluk = unidecode(self.title).replace(" ", "-")
-            baslik = re.sub('[^A-Za-z0-9-]+', '', bosluk)
-            return f'https://eksisozluk.com/{baslik}--{self.id}'
-
-class Entry(Model):
-    id = None
-    author = None
-    entry = None
-    date = None
-    edited = None
-    fav = None
-    author_id = None
-    comment = None
-    topic = None
+            return self.url
 
     def dict(self):
-        return {
-            'id': self.id, 
-            'author': self.author, 
-            'author_id': self.author_id,
-            'fav': self.fav,
-            'comment': self.comment,
-            'entry': self.entry
-        }
-
-    def url(self):
-        return f'https://eksisozluk.com/entry/{self.id}'
-
-    def text(self):
-        return self.entry.get_text().strip()
-    
-    def html(self):
-        return self.entry()
-
-    def md(self):
-        return md(str(self.entry))[1:]
+        return self.__dict__
 
     def __str__(self):
-        return md(str(self.entry).strip())[1:]
+        return self.title
+
+    def __init__(self, client, **kwargs):
+        super().__init__(client, **kwargs)
+
+    def getEntrys(self, page=1, day=None, sukela=None) -> List[Entry]:
+        """
+        Başlığın entrylerini getirir.
+        """
+
+        return self.client.getEntrys(self, page, day, sukela)
+
+    def sendEntry(self, entry: str, hidden: bool = False) -> Entry:
+        """
+        Entry gönderir.
+        """
+
+        return self.client.sendEntry(self, entry, hidden)
+
 
 class User(Model):
     id = None
@@ -116,5 +181,6 @@ class User(Model):
 
     def url(self):
         return f'https://eksisozluk.com/biri/{self.nick}'
+
     def __str__(self):
         return f'https://eksisozluk.com/biri/{self.nick}'
