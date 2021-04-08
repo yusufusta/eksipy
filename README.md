@@ -18,7 +18,7 @@ pip install eksipy
 
 ## 🛠 Doküman
 
-Dokümanlar `docs` klasöründedir.
+[Bu adresten](https://yusufusta.github.io/eksipy/) okuyabilirsiniz.
 
 ## 🔷 Örnek Kullanımlar
 
